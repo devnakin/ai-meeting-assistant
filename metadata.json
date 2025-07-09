@@ -1,0 +1,8 @@
+{
+  "name": "AI Meeting Assistant (ผู้ช่วยประชุม AI)",
+  "description": "An application to record or upload meeting audio, transcribe it to text, and generate a concise summary. It's designed to support multiple languages with a focus on Thai.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}
