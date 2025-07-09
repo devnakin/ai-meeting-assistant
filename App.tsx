@@ -3,7 +3,7 @@ import { useAudioRecorder } from './hooks/useAudioRecorder';
 import { transcribeAudio, summarizeText } from './services/geminiService';
 import { MicrophoneIcon, UploadIcon, StopCircleIcon, DocumentTextIcon, SparklesIcon, ClipboardIcon, ClipboardCheckIcon, ExclamationTriangleIcon, DownloadIcon } from './components/Icons';
 import { Status, TranscriptSegment } from './types';
-
+import { Analytics } from "@vercel/analytics/react";
 const formatTranscript = (segments: TranscriptSegment[], forFile: boolean = false): string => {
     const separator = forFile ? '\n' : '\n\n';
     return segments.map(segment => {
@@ -146,6 +146,7 @@ const App: React.FC = () => {
                     </div>
                 )}
             </main>
+                 <Analytics />
             <Footer />
         </div>
     );
